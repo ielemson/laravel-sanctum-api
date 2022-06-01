@@ -68,7 +68,7 @@ class AuthController extends Controller
 
             $user->api_token = $this->getApiToken($user);
             return response()->json([
-                'status' => 'login success',
+                'message' => 'Login success',
                 'user' => $user,
 
             ], 200);

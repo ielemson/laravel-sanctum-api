@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\PasswordResetController;
+use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,9 @@ Route::get('/',function(){
         'Laravel Version'=>app()->version()
     ]);
 });
+
+Route::resource('products', ProductController::class);
+// Route::resource('users',UserController::class);
 
 Route::group(['namespace' => 'API'], function() {
     // User Create Route
